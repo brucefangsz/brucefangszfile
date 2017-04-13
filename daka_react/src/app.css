@@ -1,0 +1,788 @@
+
+/*全局样式*/
+
+
+/* reset 重置标签默认样式*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+address,
+figure,
+figcaption,
+menu,
+details {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th {
+    text-align: left;
+    font-weight: normal;
+}
+
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+    border: 0;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+    font-style: normal;
+}
+
+[hidefocus],
+summary {
+    outline: 0;
+}
+
+li {
+    list-style: none;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: inherit;
+}
+
+q:before,
+q:after {
+    content: none;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+}
+
+label,
+summary {
+    cursor: default;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    font-weight: normal
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+    text-decoration: none;
+}
+
+body,
+textarea,
+input,
+button,
+select,
+keygen,
+legend {
+    outline: 0;
+}
+img {vertical-align: middle;}
+* {
+    /*所有元素尺寸按照边框来计算*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ccc;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #ccc;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #ccc;
+}
+
+html {
+    /*ie10阻止触控*/
+    -ms-touch-action: none;
+    height: 100%;
+    /*默认16px换算成10px这样使用起来更方便,10 ÷ 16 × 100% = 62.5%*/
+    font-size: 62.5%;
+}
+
+body {
+    /*字号单位采用rem相对顶级容器的比例,同时秒杀固定单位px和比例单位em*/
+    width : 100%;
+    overflow-x : hidden;
+    font-size: 1.4rem;
+    color: #343434;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    height: 100%;
+}
+
+.wrapper{clear:both;max-width:800px;
+    height:100%;margin:0rem auto;background-color: #f5f5f5;}
+
+#app { max-width:800px;margin:0 auto;height: 100%;}
+#app>div{
+    min-height: 100%;
+}
+a {
+    color: #343434;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.B_fl{
+    float: left;
+}
+.B_fr{
+    float: right;
+}
+.all_gameIcon {margin-bottom: 1px;display: inline-block;width: 8px;height: 8px;border-bottom: 1px solid #ccc;border-right: 1px solid #ccc;transform: rotate(-45deg);-ms-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);-o-transform: rotate(-45deg);margin-top: 17px;}
+
+/*房帅中增加样式*/
+
+.B-fontB {
+    color: #343434;
+}
+
+.B-fontG {
+    color: #8d8d8d;
+}
+
+.B-fontL {
+    color: #1ba2e6;
+}
+
+.B-fontGr {
+    color: #999;
+}
+/*清除浮动*/
+.f-cb{
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0;
+    overflow:hidden;
+}
+/* Loading */
+.m-loadding { 
+    width:100%;
+    padding-top:30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game-single-div {
+    display: inline-block;
+    float: left;
+    width: 33.3%;
+}
+
+.game-single-div img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.game-single-div span {
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #343434;
+    font-size: 12px;
+    margin-bottom: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+
+/*
+  命名空间版
+  公共样式 : R__**  (双下划线)
+  局部样式 : *(大板块缩写)_**(板块内模块)_** .. 
+*/
+.R__Modules {
+    width : 100%;
+    max-width : 800px;
+    margin : 0 auto;
+    padding-bottom: 60px;
+    min-height: 100%;
+    overflow : hidden;
+}
+.R__Container {
+    margin : 0px auto;
+    width : 100%;
+    padding-bottom : 0px;
+    background : #fff;
+    position : relative;
+}
+.R__Container .R__Container_Title {
+    position : relative;
+    padding: 0 15px;
+    height: 43px;
+    line-height: 43px;
+    margin-top: 8px;
+}
+.R__Container .R__Container_Title h1 {
+    color: #343434;
+    font-size: 1.4rem;
+    float : left;
+}
+.R__Container .R__Container_Title .R__Container_FloatRight {
+    float : right;
+}
+/* 遮罩 */
+.R__Shade {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    z-index: 1002;
+    top: 0px;
+    left: 0px;
+    opacity: 0.6;
+    text-align: center;
+    cursor: pointer;
+    display : none;
+}
+/* 禁止换行 */
+.R__NoLineFeed {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 更多 */
+.R__MoreIcon {
+    background: url('../public/images/more_menu.png')no-repeat;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+/* 箭头 */
+.R__RightArrows {
+    position: absolute;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    top: 50%;
+    margin-top: -5px;
+    right: 0px;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+/*  小小导航条 */
+.R__SmallNav_Modules {
+    display: block;height: 50px;
+}
+.R__SmallNav_Modules .R__SmallNav_Container {
+    width : 100%;
+    padding : 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.R__SmallNav_Modules .R__SmallNav_Container li {
+    padding-top: 6px;
+    font-size: 10px;
+    width: 25%;
+    float: left;
+    height: 50px;
+    line-height: 14px;
+    text-align: center;
+    position: relative;
+
+}
+.R__SmallNav_Modules .R__SmallNav_Container li img {
+    height: 24px;
+    width: 24px;
+}
+.R__SmallNav_Modules .R__SmallNav_Container .R__SmallNav_NewGameTag {
+    display:block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    background: red;
+    top: 5px;
+    right: 20px;
+}
+/*  导航条--底部 */
+.R__Nav_Modules {
+    width : 100%;
+    max-width : 800px;
+    height: 59px;
+    background: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    filter: alpha(opacity=95);
+    -moz-opacity: 0.95;
+    -khtml-opacity: 0.95;
+    opacity: 0.95;
+    display: inline-block;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.14);
+}
+.R__Nav_Modules li {
+    position: relative;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 1rem;
+}
+.R__Nav_Modules li div {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    position: relative;
+}
+.R__Nav_Modules li img {
+    display: block;
+    width: 32px;
+    overflow: hidden;
+    height: 32px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+}
+.R__Nav_Modules li a.on {
+    color:#1ba2e6;
+}
+/*  游戏列表-传统 */
+.R__GV_Modules {
+    background: #fff;margin-top:8px;
+}
+.R__GV_Modules .R__GV_Container {
+    padding : 0;
+    width: 100%;
+    background: #fff;overflow: hidden;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Banner {
+    width: 100%;
+    display: inline;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item {
+    position : relative;
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: solid 1px #f0f0f0;
+    padding: 10px 15px;
+    display: inline-block;float: left;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info {
+    width: 100%;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_Rank_Icon {
+    width: 20px;
+    height: 26px;
+    margin-right: 10px;
+    margin-top: 12px;
+    float: left;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_Rank_Num {
+    width: 20px;
+    height: 26px;
+    color: #aabbaa;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 900;
+    float: left;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameIcon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    float: left;
+    border-radius: 8px;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_PlayerIcon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    float: left;
+    border-radius: 50%;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameText {
+    margin-left: 10px;
+    line-height: 25px;
+    float:left;
+    width: 53%;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameTextShort {
+    margin-left: 10px;
+    line-height: 25px;
+    float:left;
+    width: 45%;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameTextShort .R__GV_Header{
+    overflow: hidden;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameTextShort .R__GV_Header .R__GV_GameName{
+    float: left;
+    overflow: hidden;
+    height: 25px;
+    width : 53%;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameText .R__GV_Header {
+    overflow: hidden;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameText .R__GV_Header .R__GV_GameName {
+    float: left;
+    overflow: hidden;
+    height: 25px;
+    width : 53%;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameText .R__GV_Header .R__PV_PlayerName {
+    float: left;
+    overflow: hidden;
+    height: 25px;
+    width : 100%;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameText .R__GV_Header .R__GV_GameTag {
+    display:inline-block;
+    height:100%;
+    width : 47%;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameText .R__GV_Header .R__GV_GameTag img {
+    width: 30px;
+    height: 18px;
+    margin-left: 4px;
+    float: left;
+    margin-top: 3px;   
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameAbout {
+    overflow: hidden;
+    height: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #999;
+    width : 100%;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_GameAbout .R__PV_GameLabel {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-right: 6px;
+    display: inline-block;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_PlayGame {
+    color: #343434;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    float: right;
+    margin-top: 13px;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_PlayGame_Checked {
+    color: #ccc;
+}
+.R__GV_Modules .R__GV_Container .R__GV_Item .R__GV_Info .R__GV_PlayerRank {
+    width: 42px;
+    height: 34px;
+    margin-top:8px;
+    float: right;
+    background-size: cover;
+}
+/* 标签切换 */
+.R__Modules .R__Header {
+    background-color: #fff;
+    text-align: center;
+    line-height: 43px;
+    font-size: 1.4rem;
+    max-width: 800px;
+    top: 0;
+    z-index: 1000;
+    height: 43px;
+    position: fixed;
+    width: 100%;
+}
+.R__Modules .R__Header .R__BackBtn {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    background : url('../public/images/back_btn.png') no-repeat;
+    background-size: 24px 24px;
+}
+.R__Modules .R__Header .R__TitleContainer {
+    height: 43px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align : left;
+}
+.R__Modules .R__Header .R__TitleContainer .R__Icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    top: 50%;
+    margin-top: -12px;
+    position: absolute;
+}
+.R__Modules .R__Header .R__TitleContainer .R__Title {
+    font-size: 16px;
+    color: #343434;
+    text-align: center;
+    line-height: 43px;
+    margin-left: 30px;
+}
+.R__Modules .R__NavLabel {
+    width: 100%;
+    max-width : 800px;
+    padding: 53px 15px 0 15px;
+    text-align: center;
+    position : fixed;
+    top : 0;
+    background: #fff;
+    z-index : 2;
+}
+.R__Modules .R__NavLabel .R__NavLabel_Container {
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #1ba2e6;
+}
+.R__Modules .R__NavLabel .R__NavLabel_Container .R__NavLabel_Labels {
+    float: left;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    background: #fff;
+    color: #1ba2e6;
+}
+a.R__NavLabel_Checked .R__NavLabel_Tag {
+    background: #1ba2e6 !important;
+    color: #fff !important;
+}
+/*公共提示*/
+#tagIdTipsBox{
+    width: auto;height: auto;background-color: rgba(0, 0, 0, 0.8);text-align: center;color: #fff;position: fixed;z-index: 99999;display: none;padding: 15px;top: 50%;left:50%;opacity: 0;border-radius: 5px;
+}
+/*公共缺省图*/
+.R__No_Data{
+    /*background: #fff;*/
+    min-height: 100%;
+}
+.R__No_Data img{
+    width: 240px;display:block;margin:0 auto;
+}
+.R_Min_H{
+    min-height:100%;
+}
+.R__Loading {
+    width : 100%;
+    height :43px;
+    text-align : center;
+    line-height : 40px;
+    background : #fff;
+    position : relative;
+}
+.R__Loading div {
+    width : 130px;
+    height : 100%;
+    position : absolute;
+    top : 0;
+    left : 50%;
+    margin-left : -65px;
+    text-align : center;
+}
+.R__Loading span {
+    width : 24px;
+    height : 24px;
+    margin-top : 8px;
+    left : 15px;
+    right : 200px;
+    position : absolute;
+    display : block;
+    background : url('../public/images/loading.png') no-repeat;
+    background-size : 100% 100%;
+    animation : change 1s linear infinite;
+    -webkit-animation : change 1s linear infinite;
+    -o-animation : change 1s linear infinite;
+    -moz-animation : change 1s linear infinite;
+}
+@-webkit-keyframes change {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(100deg);
+        -moz-transform: rotate(100deg);
+        -o-transform: rotate(100deg);
+        transform: rotate(100deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* 媒体查询 */
+@media (orientation: portrait) {
+    .m-gamelist-x .game {}
+}
+
+@media (orientation: landscape) {
+    .m-gamelist-x .game {
+        max-width: 5rem;
+    }
+}
+/*byfang全局媒体查询 new **********   */
+@media screen and ( min-width: 319px) {
+    .R__GameNameMaxWidth {
+        width: 80px;       
+    }
+}
+@media screen and ( min-width: 359px) {}
+
+@media screen and ( min-width: 375px) {}
+
+@media screen and ( min-width: 383px) {}
+
+@media screen and ( min-width: 414px) {
+    .R__GameNameMaxWidth {
+        width: 110px;
+    }
+}
+
+@media screen and ( min-width: 423px) {}
+
+@media screen and ( min-width: 479px) {}
+
+@media screen and ( min-width: 539px) {}
+
+@media screen and ( min-width: 639px) {}
+
+@media screen and ( min-width: 640px) {}

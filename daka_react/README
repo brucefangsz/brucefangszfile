@@ -1,0 +1,131 @@
+注：gitlab中已删除加载依赖包node_modules，克隆项目之后请执行npm install(Mac系统可能需要sudo权限)，提交的时候请注意不要讲node_modules目录上传。        -- by xueyuan
+
+git add src && git commit src -m 'rhf' && git push
+
+首页banner      
+http://wan.keejoy.com/Api/Lib/Index.banner?chanId=20409
+
+首页玩过的游戏  
+http://wan.keejoy.com/Api/Lib/Index.playgames?chanId=20409&from=index
+
+首页推荐        
+http://wan.keejoy.com/Api/Lib/Index.featured?chanId=20409
+
+首页论坛        
+http://wan.keejoy.com/Api/Lib/Index.indexbbs?chanId=20409&from=index
+
+我的            
+http://wan.keejoy.com/Api/Lib/User.mine?chanId=20409
+
+消息列表
+http://wan.keejoy.com/Api/Lib/Msg.msglist?chanId=20409
+
+游戏详情页
+http://wan.keejoy.com/Api/Lib/Game.gameinfo?chanId=20409&gameId=257
+
+段子资讯
+http://wan.keejoy.com/Api/Lib/Material.joke?chanId=20409
+
+美图资讯
+http://wan.keejoy.com/Api/Lib/Material.photo?chanId=20409
+
+游戏资讯
+http://wan.keejoy.com/Api/Lib/Material.article?chanId=20409
+
+新游-新上架
+http://wan.keejoy.com/Api/Lib/Game.newGame?chanId=20409
+
+新游-新开服
+http://wan.keejoy.com/Api/Lib/NewOpenService.lists?chanId=20409
+
+玩过的游戏列表  
+http://wan.keejoy.com/Api/Lib/Index.playgames?chanId=20409
+
+排行榜
+http://wan.keejoy.com/Api/Lib/Game.rankingList?chanId=20409
+
+礼包列表
+http://wan.keejoy.com/Api/Lib/Gift.lists
+
+礼包-我的礼包
+http://wan.keejoy.com/Api/Lib/Gift.lists?type=my
+
+领礼包
+http://wan.keejoy.com/Api/Lib/gift.used?gameId=257&giftId=52
+
+活动列表
+http://wan.keejoy.com/Api/Lib/Activity.lists?page=0
+
+活动详情
+http://wan.keejoy.com/Api/Lib/Activity.details?actId=6
+
+评论&点赞
+ * @type 信息类型id  1活动3段子4美女5游戏动态         
+ * @typeId  具体信息id 活动=egret_act.act_id         
+ * @act  事件类型    1=点赞  2=评论                  
+ * 
+ * 点赞
+ * @status     0赞  -1踩 
+ * 
+ * 评论
+ * @pId        被回复的评论id，此参数存在时为回复
+ * @masterId   主评论id
+ * @pEgretId   被回复评论的评论人id。
+ * @content    评论内容  
+ *
+ * Method   POST
+ *
+ http://wan.keejoy.com/Api/Lib/Evaluate
+
+ 获取更多评论
+ * @type 信息类型id  1活动3段子4美女5游戏动态         
+ * @typeId  具体信息id 活动=egret_act.act_id   
+ * @page    页码
+ http://wan.keejoy.com/Api/Lib/Evaluate.lists?type=1&typeId=6&page=0
+
+
+搜索
+http://wan.keejoy.com/Api/Lib/Search?key=魁拔
+
+清空搜索历史记录
+http://wan.keejoy.com/Api/Lib/Search?cls=1
+
+
+获取登录状态下用户信息 code=-1 未登录 code=1 && data
+http://wan.keejoy.com/Api/Lib/User.getInfo  
+
+获取游戏真实地址，只有登录状态下可以获取到 code=1 && data
+http://wan.keejoy.com/Api/Lib/Game.realUrl?gameId=1000
+
+
+问题反馈
+* @type  问题类型 0=其它 1=登录问题 2=充值问题 3=游戏无法进入
+* @contact   联系方式
+* @body      问题描述
+* Method     POST
+http://wan.keejoy.com/Api/Lib/User.question
+
+
+用户签到
+http://wan.keejoy.com/Api/Lib/User.signin
+
+
+
+开服信息预约接口
+* @gosId    开服信息ID
+* @mobile   预约手机号
+* @type     预约类型  2=有验证码 1=无验证码
+* @code     验证码
+* Method    GET
+http://wan.keejoy.com/Api/Lib/NewOpenService.bespoke?gosId=&type=mobile=&code=
+
+
+预约开服信息发送验证码
+* @gosId    开服信息ID
+* @mobile   预约手机号
+* Method    GET
+http://wan.keejoy.com/Api/Lib/NewOpenService.sendSms?gosId=mobile=
+
+
+ 安全认证->确认认证
+ http://wan.keejoy.com/Api/Lib/User.verify?type=(mobile||email)&(mobile||email)=
